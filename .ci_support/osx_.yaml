@@ -1,0 +1,17 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+c_compiler:
+- toolchain_c
+macos_machine:
+- x86_64-apple-darwin13.4.0
+macos_min_version:
+- '10.9'
+pin_run_as_build:
+  tk:
+    max_pin: x.x
+  zlib:
+    max_pin: x.x
+tk:
+- '8.6'
+zlib:
+- '1.2'
