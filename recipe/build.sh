@@ -2,7 +2,7 @@
 
 set -x -e
 
-./configure --prefix=$PREFIX  --with-tcl=$PREFIX/lib
+./configure --prefix=$PREFIX
 
 INIT=${PREFIX}/init/bash
 
