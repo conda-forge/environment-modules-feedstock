@@ -2,8 +2,6 @@
 
 set -x -e
 
-which tclsh
-
 ./configure --prefix=$PREFIX
 make install
 
