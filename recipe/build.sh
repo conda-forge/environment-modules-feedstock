@@ -2,7 +2,7 @@
 
 set -x -e
 
-./configure --prefix=$PREFIX
+./configure --prefix=$PREFIX --with-tclsh=$PREFIX/bin/tclsh --with-tcl=$PREFIX/lib
 make install
 
 INIT=${PREFIX}/init/bash

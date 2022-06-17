@@ -19,8 +19,8 @@ requirements:
   build:
       - {{ compiler('c') }}
       - make
-      - tk
   host:
+      - tk
       - zlib
   run:
       - {{ pin_compatible('tk') }}
