@@ -2,7 +2,10 @@
 
 set -x -e
 
+which tclsh
+
 ./configure --prefix=$PREFIX
+make install
 
 INIT=${PREFIX}/init/bash
 
