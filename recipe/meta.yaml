@@ -16,6 +16,7 @@ build:
 requirements:
   build:
       - {{ compiler('c') }}
+      - make
       - tk >8.5
       - zlib 1.2.*
   run:
@@ -24,8 +25,7 @@ requirements:
 
 test:
   commands:
-    - module --version 2>&1 | grep "Modules Release 4.1.4"  # [linux]
-    - module --version 2>&1 | grep "Modules Release 4.1.4"  # [osx]
+    - module --version 2>&1 | grep "Modules Release {{ version }}"
 
 about:
   home: http://modules.sourceforge.net/
