@@ -17,8 +17,8 @@ requirements:
   build:
       - {{ compiler('c') }}
       - make
-      - tk >8.5
-      - zlib 1.2.*
+      - tk
+      - zlib
   run:
       - {{ pin_compatible('tk') }}
       - {{ pin_compatible('zlib') }}
