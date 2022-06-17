@@ -1,15 +1,13 @@
 {% set name = "environment-modules" %}
-{% set version = "4.1.4" %}
-{% set sha256 = "965b6056ea6b72b87d9352d4c1db1d7a7f9f358b9408df2689d823b932d6aa7f" %}
+{% set version = "5.1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: http://prdownloads.sourceforge.net/modules/modules-{{version}}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://github.com/cea-hpc/modules/releases/download/v{{version}}/modules-{{version}}.tar.bz2
+  sha256: 28354dd1ab2ff25e9fb9ce759c77eeefec21f22a112d579fbf3cc802174ec944
 
 build:
   skip: true  # [win]
@@ -17,14 +15,12 @@ build:
 
 requirements:
   build:
-      - gcc  # [linux]
-      - llvm  # [osx]
-      - tk 8.6.*
+      - {{ compiler('c') }}
+      - tk >8.5
       - zlib 1.2.*
   run:
-      - libgcc  # [linux]
-      - tk 8.6.*
-      - zlib 1.2.*
+      - {{ pin_compatible('tk') }}
+      - {{ pin_compatible('zlib') }}
 
 test:
   commands:
@@ -62,7 +58,7 @@ session with modulefiles.'
      also be bundled into metamodules that will load an entire suite of different
      applications.
   doc_url: http://modules.sourceforge.net/
-  dev_url: http://modules.sourceforge.net/
+  dev_url: https://github.com/cea-hpc/modules
 
 extra:
   recipe-maintainers:
