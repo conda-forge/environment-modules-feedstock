@@ -9,7 +9,7 @@ sed -i.bak 's;CC=.*/;CC=;' lib/Makefile
 
 make install
 
-INIT=${PREFIX}/init/bash
+INIT=${PREFIX}/init/profile.sh
 
 mkdir -p $PREFIX/etc/conda/activate.d/
 echo "source $INIT" >> $PREFIX/etc/conda/activate.d/environment-modules-activate.sh
