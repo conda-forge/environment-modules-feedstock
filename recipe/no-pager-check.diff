@@ -1,0 +1,23 @@
+diff --git a/configure b/configure
+index bf317ab..989689f 100755
+--- a/configure
++++ b/configure
+@@ -919,18 +919,6 @@ PS=$reqpath
+ check_requirement 'basename' '' "PATH=$binsearchpath"
+ BASENAME=$reqpath
+ 
+-# get pager program location from standard PATHs or /usr/local/bin
+-# or validate location passed as argument
+-if [ -n "$pager" ]; then
+-   check_requirement $pager '' "PATH=$binsearchpath"
+-   pager=$reqpath
+-fi
+-# adapt pager program settings dependings of specified args
+-if [ $defpageropts -eq 1 -a "${pager##*/}" != 'less' ]; then
+-    pageropts=''
+-    echo_warning "As chosen pager is not \`less', default pager options are cleared"
+-fi
+-
+ # fetch modules version from version.inc.in file (which may be raw data to
+ # refine or exact values if dist has been built by `git archive`)
+ if [ -r ${progdir}/version.inc.in ]; then
