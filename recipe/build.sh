@@ -2,6 +2,9 @@
 
 set -x -e
 
+# Updated config.sub for apple arm
+cp $BUILD_PREFIX/share/gnuconfig/config.* lib/
+
 ./configure --prefix=$PREFIX --with-tclsh=$PREFIX/bin/tclsh --with-tcl=$PREFIX/lib
 
 # Correct for fact that tk package includes reference to its _build_env
