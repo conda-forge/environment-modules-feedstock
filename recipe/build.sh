@@ -4,7 +4,7 @@ set -x -e
 
 ./configure --prefix=$PREFIX --with-tclsh=$PREFIX/bin/tclsh --with-tcl=$PREFIX/lib
 
-# Correct for fact that tk package includes reference to it's _build_env
+# Correct for fact that tk package includes reference to its _build_env
 sed -i.bak 's;CC=.*/;CC=;' lib/Makefile
 
 make install
