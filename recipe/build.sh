@@ -5,6 +5,9 @@ set -x -e
 ./configure --prefix=$PREFIX --with-tclsh=$PREFIX/bin/tclsh --with-tcl=$PREFIX/lib
 make install
 
+# Correct for fact that tk package includes reference to it's _build_env
+sed -i.bak 's;CC=.*/;CC=;' lib/Makefile
+
 INIT=${PREFIX}/init/bash
 
 mkdir -p $PREFIX/etc/conda/activate.d/
