@@ -2,8 +2,8 @@
 
 set -x -e
 
-# Updated config.sub for apple arm
-cp $BUILD_PREFIX/share/gnuconfig/config.* lib/
+# Get an updated config.sub and config.guess
+cp $BUILD_PREFIX/share/gnuconfig/config.* .
 
 ./configure --prefix=$PREFIX --with-tclsh=$PREFIX/bin/tclsh --with-tcl=$PREFIX/lib
 
