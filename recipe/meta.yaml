@@ -28,7 +28,6 @@ requirements:
 
 test:
   commands:
-    - module --version 2>&1
     - module --version 2>&1 | grep "Modules Release {{ version }}"
 
 about:
