@@ -66,5 +66,6 @@ session with modulefiles.'
 
 extra:
   recipe-maintainers:
+    - ndevenish
     - jerowe
     - julozi
