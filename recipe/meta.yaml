@@ -26,9 +26,10 @@ requirements:
       - {{ pin_compatible('tk') }}
       - {{ pin_compatible('zlib') }}
 
-# test:
-#   commands:
-#     - module --version 2>&1 | grep "Modules Release {{ version }}"
+test:
+  commands:
+    - module --version 2>&1
+    - module --version 2>&1 | grep "Modules Release {{ version }}"
 
 about:
   home: http://modules.sourceforge.net/
