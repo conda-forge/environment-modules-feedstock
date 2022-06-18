@@ -2,6 +2,9 @@
 
 set -x -e
 
+# Get an updated config.sub and config.guess
+cp $BUILD_PREFIX/share/gnuconfig/config.* .
+
 ./configure --prefix=$PREFIX --with-tclsh=$PREFIX/bin/tclsh --with-tcl=$PREFIX/lib
 
 # Correct for fact that tk package includes reference to its _build_env

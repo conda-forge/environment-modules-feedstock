@@ -13,12 +13,13 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
 
 requirements:
   build:
       - {{ compiler('c') }}
       - make
+      - gnuconfig  # [unix]
   host:
       - tk
       - zlib
