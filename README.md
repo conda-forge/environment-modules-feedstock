@@ -1,11 +1,11 @@
-About environment-modules
-=========================
+About environment-modules-feedstock
+===================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/environment-modules-feedstock/blob/main/LICENSE.txt)
 
 Home: http://modules.sourceforge.net/
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/environment-modules-feedstock/blob/main/LICENSE.txt)
 
 Summary: The Environment Modules package is a tool that simplify shell initialization and lets users easily modify their environment during the session with modulefiles.
 
@@ -57,14 +57,14 @@ Current build status
               <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4750&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/environment-modules-feedstock?branchName=main&jobName=linux&configuration=linux_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/environment-modules-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4750&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/environment-modules-feedstock?branchName=main&jobName=osx&configuration=osx_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/environment-modules-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -198,4 +198,5 @@ Feedstock Maintainers
 
 * [@jerowe](https://github.com/jerowe/)
 * [@julozi](https://github.com/julozi/)
+* [@ndevenish](https://github.com/ndevenish/)
 
